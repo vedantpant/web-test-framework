@@ -1,0 +1,15 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/api/device/provision",
+        "bodyPatterns": [
+            {
+                "contains": "INVALID"
+            }
+        ]
+    },
+    "response": {
+        "status": 400,
+        "jsonBody": {"success": false, "error": "Invalid serial number"}
+    }
+}

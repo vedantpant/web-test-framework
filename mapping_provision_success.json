@@ -1,0 +1,15 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/api/device/provision",
+        "bodyPatterns": [
+            {
+                "contains": "ABC123"
+            }
+        ]
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {"success": true, "message": "Device provisioned successfully"}
+    }
+}

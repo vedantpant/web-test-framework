@@ -1,0 +1,11 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/device/status-slow"
+    },
+    "response": {
+        "status": 200, 
+        "jsonBody": {"connected": true, "deviceId": "ITK-1234"},
+        "fixedDelayMilliseconds": 5000
+    }
+}

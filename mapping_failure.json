@@ -1,0 +1,14 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/device/status-failed"
+    },
+    "response":{
+        "status": 500,
+        "jsonBody": {
+            "connected": false,
+            "error": "Device connection timeout"
+        },
+        "headers": {"Content-Type": "application/json"}
+    }
+}

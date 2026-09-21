@@ -1,0 +1,12 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/api/device/status"
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {"connected": true, "deviceId": "ITK-1234"},
+        "headers": {"Content-Type": "application/json"}
+    }
+}
+
