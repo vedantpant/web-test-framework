@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Device Schema",
+  "description": "Schema for a device object (for WireMock mocking)",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Device identifier"
+    },
+    "deviceId": {
+      "type": "string",
+      "description": "Unique device ID"
+    },
+    "connected": {
+      "type": "boolean",
+      "description": "Whether the device is connected"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["online", "offline", "error"],
+      "description": "Current device status"
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Device serial number"
+    }
+  },
+  "required": ["deviceId", "connected"],
+  "additionalProperties": true
+}
