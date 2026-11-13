@@ -24,11 +24,18 @@ def pytest_runtest_makereport(item, call):
 
 
 @pytest.fixture(autouse=True)
-def screenshot_on_failure(request, page):
+def screenshot_on_failure(request):
+    """Hook: Save screenshot if playwright test fails."""
+    if "page" not in request.fixturenames:
+        yield
+        return
+
+    page = request.getfixturevalue('page')
     yield
     if request.node.rep_call.failed:
-        os.makedirs("reports/screenshots", exist_ok=True)
+
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        screenshot_path = f"reports/screenshots/{request.node.name}_{timestamp}.png"
+        screenshot_path = f"screenshots/failure_{request.node.name}_{timestamp}.png"
+        os.makedirs("screenshots", exist_ok=True)
         page.screenshot(path=screenshot_path)
-        print(f"\nScreenshot saved: {screenshot_path}")
+        print(f"\n[Screenshot] saved to: {screenshot_path}")
