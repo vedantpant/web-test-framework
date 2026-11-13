@@ -51,8 +51,7 @@ INVALID_CASES = [
 )
 def test_post_invalid_payload(wiremock_url, payload, expected_error):
     stub = {
-        
-        "request": {
+         "request": {
             "method": "POST",
             "url": "/api/mock/payload/invalid",
             "bodyPatterns": [

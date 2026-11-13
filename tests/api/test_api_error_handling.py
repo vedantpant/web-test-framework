@@ -98,7 +98,7 @@ class TestErrorHandling:
         assert hasattr(response, 'status_code'), "Response should have status_code"
         assert isinstance(response.status_code, int), "status_code should be an integer"
 
-    def test_response_headers_present(self, api_session, api_base_url):
+    def test_response_headers_present(self, api_session, api_base_url):      
         """Test: Response includes headers."""
         response = api_session.get(f"{api_base_url}/users/1")
         assert response.headers is not None, "Response should have headers"
