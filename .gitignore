@@ -4,4 +4,5 @@ __pycache__/
 reports/screenshots/*.png
 .env
 wiremock-standalone.jar
-*.logscreenshots/
+*.log
+screenshots/
