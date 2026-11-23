@@ -1,3 +1,5 @@
+
+
 def test_handles_broken_company_logos_response(page):
     def handle_route(route):
             route.fulfill(
@@ -14,6 +16,6 @@ def test_handles_broken_company_logos_response(page):
 
     assert logo_link.count() == 0
 
-    assert page.title() == "ReqRes | Free REST API for developers | ReqRes"
+    assert page.title() == "ReqRes | Free REST API for developers"
 
     

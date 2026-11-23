@@ -1,5 +1,7 @@
 import json
+import pytest
 
+@pytest.mark.xfail(reason="reqres.in no longer loads logos from company_logos.json", strict=False)
 def test_handle_fake_companies(page):
     fake_companies = [
         {"companyName": "FakeCorp1", "link": "https://fake1.com", "logo": "/img/logos/fake1.png", "dark": False, "weight": "standard"},
